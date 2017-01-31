@@ -1,0 +1,16 @@
+
+import "class" : new ;
+import type ;
+import generators ;
+import project ;
+
+type.register EOT : eot ;
+
+generators.register-standard run-action : EOT : H(%.eot) ;
+
+actions run-action
+{
+  cat $(<) > $(>)
+}
+
+lib a : a.cpp abc.eot ;
